@@ -259,6 +259,9 @@ a{
     padding: 40px 60px;
     box-shadow: 0 8px 10px #191A23;
 }
+.pi-sub{
+    display: none;
+}
 .f{
     /* border: 1px solid gray; */
     display: flex;
@@ -293,12 +296,12 @@ hr{
     margin: 30px 0;
     height: 159px;
     border: 1px solid #191A23;
+    box-shadow: 0 8px 10px #191A23;
     border-radius: 45px;
     background-color: #F3F3F3;
     display: flex;
     gap: 35px;
     padding: 40px 60px;
-    box-shadow: 0 8px 10px #191A23;
 }
 .pi{
     width: 58px;
@@ -328,7 +331,7 @@ hr{
 }
 
 .contact-block{
-    border: solid 1px black;
+    /* border: solid 1px black; */
     height: 773px;
     margin: 80px 100px;
     border-radius: 45px;
@@ -579,12 +582,38 @@ footer{
         height: 23.61px;
     }
     .texts{
-        display: none;
+        position: fixed;
+        top: 0;
+        right: 635px;
+        width: 280px;
+        height: 100vh;
+        background: white;
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 100px;
+        transition: right 0.4s ease-in-out;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+    }
+    .texts.active{
+        right: 0;
+    }
+    .texts a{
+        font-size: 20px;
+        padding: 5px 0;
+    }
+    .texts .req{
+        width: 220px;
+        margin-top: 20px;
     }
     .burger{
         display: flex;
+        cursor: pointer;
+        z-index: 1000;
+        position: relative;
     }
-
+    
 
 
     .header{
@@ -738,7 +767,7 @@ footer{
         width: 432px;
         height: 98px;
         border: 1px solid;
-        background-color: white;
+        background-color: #F3F3F3;
     }
     .block1 .f{
         /* border: solid 1px red; */
@@ -761,7 +790,12 @@ footer{
         font-size: 18px;
         font-weight: 500;
     }
-    .pi{
+    
+    .f .pi{
+        display: none;
+    }
+    .pi-sub{
+        display: block;
         width: 30px;
         height: 30px;
         margin-left: 50px;
@@ -787,7 +821,7 @@ footer{
         align-items: center;
         justify-content: space-between;
         padding: 0 20px;
-        box-shadow: 0 5px 0 #191A23;
+        /* box-shadow: 0 5px 0 #191A23; */
         margin-bottom: -5px;
     }
     .block2 .f1{
@@ -918,8 +952,8 @@ footer{
 
 
     .foot{
-        width: 465px;
-        height: 945.6134033203125px;
+        width: 466px;
+        height: 975px;
         margin-top: 230px;
         margin-left: -100px;
     }
@@ -943,7 +977,7 @@ footer{
     }
     .elic{
         position: absolute;
-        margin-top: 650px;
+        margin-top: 750px;
     }
 
     .frame26{
@@ -955,22 +989,45 @@ footer{
         margin: auto;
     }
     .subscription{
-        margin-left: -500px;
+        margin-left: -530px;
         margin-top: 230px;
+        width: 435px;
         height: 216px;
         display: flex;
         flex-direction: column;
         gap: 20px;
     }
 
-    .field{
-        margin-top: 25px;
+    .field #email{
+        margin-top: -55px;
+        margin-left: 10px;
+        width: 330px;
+        height: 66px;
+    }
+    .sub button{
+        /* border: 1px solid red; */
         width: 330px;
         height: 66px;
     }
 
     .line-text{
-        margin-top: 450px;
+        margin-top: 540px;
+    }
+    .line-text .line{
+        width: 390px;
+        margin-left: -20px;
+        
+    }
+    .lt{
+        /* border: 1px solid red; */
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 25px;
+        margin-left: 25px;
+        text-align: center;
+        width: 300px;
+        height: 55px;
     }
 }
 
